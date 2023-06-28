@@ -11034,3 +11034,75 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+/* Estilo da div 'row' */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo da div 'Portifolio' */
+.Portifolio {
+  width: 100%;
+  max-width: 400px; /* Ajuste a largura conforme necessário */
+  margin: 0 auto;
+}
+
+/* Estilo do item do portfólio */
+.portfolio-item1 {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* Estilo do link do portfólio */
+.portfolio-link1 {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo do hover do portfólio */
+.portfolio-hover1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilo do conteúdo do hover do portfólio */
+.portfolio-hover-content1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Estilo do ícone do portfólio */
+.port1 {
+  font-size: 50px;
+  color: #fff;
+}
+
+/* Estilo da legenda do portfólio */
+.portfolio-caption1 {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo do cabeçalho da legenda do portfólio */
+.portfolio-heading1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilo do texto sem destaque da legenda do portfólio */
+.text-muted1 {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 5px;
+}

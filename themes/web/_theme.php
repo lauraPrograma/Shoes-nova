@@ -33,11 +33,26 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url("/compras");?>">Minhas compras</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url("/cadastro");?>">Cadastre - se</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url("/entrar");?>">Entrar</a></li>
-                        
+                        <li class="dropdown"><a href="#"><span>Categorias</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <?php
+                            foreach($categories as $category){
+                            ?>
+                            <li><a href="<?= url("loja/{$category->name}")?>"><?= $category->name?></a></li>
+                            <?php
+                            }
+                            
+                            ?>
+                           
+                        </ul>
+                    
+                    </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">

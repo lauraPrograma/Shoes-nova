@@ -22,6 +22,7 @@ $route->get("/cadastro","Web:register");
 $route->get("/entrar","Web:login");
 $route->get("/faq","Web:faq");
 $route->get("/loja","Web:store");
+$route->get("/loja/{categoryName}", "Web:store");
 
 
 

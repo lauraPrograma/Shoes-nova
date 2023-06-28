@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="assets/css/styles.css" rel="stylesheet" />
+        <link href="<?= url("assets/web/css/styles.css"); ?>" rel="stylesheet">
         
     </head>
     <body id="page-top">
@@ -28,9 +28,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="inicio.html">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#sobre">Sobre</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="produto.html">produtos</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url();?>">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url("sobre");?>">Sobre</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?= url("/produto");?>">produtos</a></li>
+                        <li class="dropdown"><a href="#"><span>Categorias</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <?php
+                            foreach($categories as $category){
+                            ?>
+                            <li><a href="<?= url("loja/{$category->name}")?>"><?= $category->name?></a></li>
+                            <?php
+                            }
+                            
+                            ?>
+                           
+                        </ul>
+                    
+                    </li>
                     </ul>
                 </div>
             </div>
